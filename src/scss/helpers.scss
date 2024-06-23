@@ -1,0 +1,140 @@
+.bold {
+  font-weight: 900;
+}
+.row {
+  display: flex;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-12 {
+  gap: 12px;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+// MARGIN HELPERS
+.mx-xs {
+  margin-inline: 4px;
+}
+
+.mx-sm {
+  margin-inline: 8px;
+}
+
+.mx-md {
+  margin-inline: 16px;
+}
+
+.mx-lg {
+  margin-inline: 32px;
+}
+
+.mx-xl {
+  margin-inline: 48px;
+}
+
+.my-xs {
+  margin-block: 4px;
+}
+.my-sm {
+  margin-block: 8px;
+}
+.my-md {
+  margin-block: 16px;
+}
+.my-lg {
+  margin-block: 32px;
+}
+.my-xl {
+  margin-block: 48px;
+}
+// PADDING HELPERS
+.px-xs {
+  padding-inline: 4px;
+}
+.px-sm {
+  padding-inline: 8px;
+}
+.px-md {
+  padding-inline: 16px;
+}
+.px-lg {
+  padding-inline: 32px;
+}
+
+.py-xs {
+  padding-block: 4px;
+}
+.py-sm {
+  padding-block: 8px;
+}
+.py-xs {
+  padding-block: 16px;
+}
+.py-xs {
+  padding-block: 32px;
+}
