@@ -1,8 +1,14 @@
 export interface Post {
-  user : string;
+  user: string;
   text: string;
-  date: Date;
+  createdAt: Date;
   image: string;
-  likes: Array<string>;
-  comments: Array<string>;
+  likes: string[];
+  comments: Comment[];
+}
+
+interface Comment {
+  text: string;
+  userId: string;
+  createdAt: Date;
 }

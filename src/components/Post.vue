@@ -3,7 +3,7 @@
     <div class="post-header column my-xs">
       <div class="user-info row justify-between align-center">
         {{ post.user }}
-        {{ post.date }}
+        {{ post.createdAt }}
       </div>
     </div>
     <div class="post-body">
@@ -14,7 +14,7 @@
     </div>
     <div class="post-footer colume">
       <div class="likes mx-sm">
-        <span >{{ post.likes.length }} Likes</span>
+        <span>{{ post.likes.length }} Likes</span>
       </div>
       <div class="comments mx-sm">
         <span>{{ post.comments.length }} Comments</span>
@@ -34,18 +34,23 @@ const props = defineProps<PostProps>();
 </script>
 
 <style lang="scss" scoped>
-.post{
-background-color: #ccddff;
-border-radius: 10px;
+.post {
+  background-color: #ccddff;
+  border-radius: 10px;
 }
 .post-text {
-color: #555;
+  color: #555;
 }
-.post-image{
-max-width: 100%;
-border-radius: 10px;
+.post-image {
+  img {
+    width: 500px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  border-radius: 10px;
 }
-.likes, .comments {
+.likes,
+.comments {
   cursor: pointer;
   color: #007bff;
 }

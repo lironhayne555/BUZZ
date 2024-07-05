@@ -2,7 +2,7 @@ import Feed from "./pages/Feed.vue";
 import About from "./pages/About.vue";
 export const routes = [
   {
-    path: "/about/:sandal",
+    path: "/about",
     name: "About",
     component: About,
   },
