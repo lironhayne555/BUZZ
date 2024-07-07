@@ -10,7 +10,11 @@ import { Post } from "../models/post";
 
 const posts: Post[] = [
   {
-    user: "liron hayne",
+    user: {
+      username: "liron hayne",
+      avatar:
+        "https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg",
+    },
     text: "This is a sample post",
     createdAt: new Date(),
     image: "https://www.ynet.co.il/PicServer5/2018/01/02/8255043/Image2.jpg",
@@ -18,7 +22,7 @@ const posts: Post[] = [
     comments: [{ text: "nice post", userId: "2", createdAt: new Date() }],
   },
   {
-    user: "liron ohayon",
+    user: { username: "liron ohayon" },
     text: "This is a sample post!",
     createdAt: new Date(),
     image:

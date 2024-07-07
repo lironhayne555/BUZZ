@@ -1,10 +1,15 @@
 export interface Post {
-  user: string;
+  user: User;
   text: string;
   createdAt: Date;
   image: string;
   likes: string[];
   comments: Comment[];
+}
+
+interface User {
+  username: string;
+  avatar?: string;
 }
 
 interface Comment {
