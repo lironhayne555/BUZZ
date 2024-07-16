@@ -2,6 +2,7 @@
   <section class="signup-page">
     <AppLogo />
     <Form
+      @submit="onSubmit"
       @secondary-button-click="router.push('/login')"
       secondary-button-label="Already have an account? sign in"
       class="signup-form"
@@ -17,6 +18,10 @@ import Form from "../components/Form.vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+
+const onSubmit = (values: { [key: string]: string }) => {
+  console.log(values);
+};
 
 const signupFormItems = ref([
   { placeholder: "username", name: "username" },
@@ -37,6 +42,5 @@ const signupFormItems = ref([
   width: 100%;
   min-height: calc(100vh - 70px);
   align-items: center;
-  padding: 25px;
 }
 </style>

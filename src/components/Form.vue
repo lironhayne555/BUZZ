@@ -2,13 +2,14 @@
   <form class="column align-center gap-8" @submit.prevent="onSubmit">
     <Input
       v-for="(input, index) in items"
+      @input="(value:string)=>onInput(value,input.name)"
       :key="index"
       class="full-width"
       :name="input.name"
       :type="input.type || 'text'"
       :placeholder="input.placeholder"
     />
-    <Button :clickFunc="onSubmit" text="Submit" ></Button>
+    <Button text="Submit"></Button>
     <p
       v-if="secondaryButtonLabel"
       @click="emit('secondaryButtonClick')"
@@ -31,6 +32,10 @@ onMounted(() => {
   });
 });
 
+const onInput = (value: string, name: string) => {
+  formValues.value[name] = value;
+};
+
 interface Input {
   placeholder: string;
   type?: string;
@@ -41,15 +46,17 @@ interface FormProps {
   secondaryButtonLabel?: string;
 }
 
+function onSubmit() {
+  console.log("submit");
+
+  // emit("submit", formValues.value);
+}
 const props = defineProps<FormProps>();
 
 const emit = defineEmits<{
   (e: "secondaryButtonClick"): void;
+  (e: "submit", values: { [key: string]: string }): void;
 }>();
-
-function onSubmit() {
-  console.log("submit");
-}
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,10 @@
 <template>
-  <input :name="name" :type="type" :placeholder="placeholder" />
+  <input
+    @input="onInput"
+    :name="name"
+    :type="type"
+    :placeholder="placeholder"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -10,6 +15,14 @@ interface InputProps {
 }
 
 const props = defineProps<InputProps>();
+
+const onInput = (ev: any) => {
+  emit("input", ev.target.value);
+};
+
+const emit = defineEmits<{
+  (e: "input", value: string): void;
+}>();
 </script>
 
 <style lang="scss" scoped>

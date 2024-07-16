@@ -3,6 +3,7 @@
     <AppLogo />
     <Form
       @secondary-button-click="router.push('/signup')"
+      @submit="onSubmit"
       secondary-button-label="Didn't sign up? click here"
       class="login-form"
       :items="loginFormItems"
@@ -17,6 +18,10 @@ import Form from "../components/Form.vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+
+const onSubmit = (values: { [key: string]: string }) => {
+  console.log(values);
+};
 
 const loginFormItems = ref([
   { placeholder: "username", type: "text", name: "username" },
