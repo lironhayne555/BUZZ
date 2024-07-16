@@ -8,7 +8,7 @@
       :type="input.type || 'text'"
       :placeholder="input.placeholder"
     />
-    <button>Submit</button>
+    <Button :clickFunc="onSubmit" text="Submit" ></Button>
     <p
       v-if="secondaryButtonLabel"
       @click="emit('secondaryButtonClick')"
@@ -22,6 +22,7 @@
 <script lang="ts" setup>
 import { onMounted, Ref, ref } from "vue";
 import Input from "./Input.vue";
+import Button from "./Button.vue";
 const formValues: Ref<{ [key: string]: string }> = ref({});
 
 onMounted(() => {
@@ -46,7 +47,7 @@ const emit = defineEmits<{
   (e: "secondaryButtonClick"): void;
 }>();
 
-function onSubmit(ev) {
+function onSubmit() {
   console.log("submit");
 }
 </script>

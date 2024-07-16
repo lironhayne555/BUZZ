@@ -37,5 +37,6 @@ const signupFormItems = ref([
   width: 100%;
   min-height: calc(100vh - 70px);
   align-items: center;
+  padding: 25px;
 }
 </style>
